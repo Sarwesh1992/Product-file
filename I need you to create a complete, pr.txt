@@ -1,0 +1,98 @@
+I need you to create a complete, production-ready Responsive Affiliate Landing Page App that showcases multiple partner affiliate offers on a single webpage. This should be a modern, clean, and mobile-optimized application.
+
+## Core Requirements:
+
+### 1. Technical Implementation
+Build a complete web application using:
+- HTML5 with semantic markup and proper SEO meta tags
+- Modern CSS3 with CSS Grid for responsive layout
+- Vanilla JavaScript (ES6+) with clean, modular code
+- Mobile-first responsive design approach
+
+### 2. Partner Card System
+Each affiliate partner card must include:
+- Partner logo (use Clearbit API: https://logo.clearbit.com/[domain])
+- Compelling offer title (e.g., "Get 20% Off Amazon Prime")
+- One-line description explaining the offer value
+- Call-to-action button with UTM-tracked affiliate link
+- WhatsApp share button with pre-formatted message
+
+### 3. Layout Requirements
+- Responsive CSS Grid layout:
+  - Mobile (≤768px): Single column
+  - Tablet (769px-1024px): Two columns  
+  - Desktop (≥1025px): Three columns
+- Clean, modern design with card-based UI
+- Smooth hover effects and transitions
+- Professional color scheme with high contrast
+
+### 4. Search Functionality
+- Real-time search bar that filters by:
+  - Partner name
+  - Offer title
+  - Keywords in description
+- Show "No results found" when search yields no matches
+- Clear search input functionality
+
+### 5. UTM Tracking Integration
+All affiliate links must include these UTM parameters:
+- utm_source=affiliate-hub
+- utm_medium=landing-page
+- utm_campaign=partner-deals
+- utm_content=[partner-name]
+
+### 6. WhatsApp Share Integration
+- Use official WhatsApp API format: https://api.whatsapp.com/send?text=
+- Pre-formatted message: "Check out this offer: [Title] - [Description] [UTM-tracked link]"
+- Works on both mobile and desktop
+
+### 7. Sample Data
+Include 6-8 sample partners with realistic data:
+- Popular brands like Amazon, Netflix, Uber, Spotify, Airbnb
+- Realistic discount percentages and offer descriptions
+- Mix of different categories (streaming, shopping, travel, etc.)
+
+### 8. Data Structure
+Load partner data from a JSON array with this structure:
+{
+"id": "partner-id",
+"name": "Partner Name",
+"logo": "logo-url",
+"title": "Offer Title",
+"description": "Brief description",
+"affiliateLink": "base-affiliate-url",
+"discount": "percentage",
+"category": "offer-category"
+}
+
+### 9. Performance & SEO
+- Lightweight code with fast loading times
+- Proper meta tags for SEO
+- Open Graph tags for social sharing
+- Semantic HTML structure
+- Alt text for all images
+- Accessible design (WCAG 2.1 AA compliant)
+
+### 10. Deployment Ready
+- Single HTML file with embedded CSS and JavaScript
+- Or separate files organized in folders
+- Include setup instructions for Netlify/Vercel deployment
+- Add README with customization instructions
+
+## Additional Features:
+- Loading states for better UX
+- Error handling for broken images/links
+- Responsive images with proper sizing
+- Touch-friendly interface (minimum 44px touch targets)
+
+## Deliverables:
+1. Complete HTML file with proper structure
+2. CSS with modern responsive design
+3. JavaScript with clean, documented code
+4. Sample JSON data with realistic offers
+5. README with setup and customization instructions
+6. Brief deployment guide for Netlify/Vercel
+
+Please provide a complete, working solution that I can immediately deploy and use as a professional affiliate marketing landing page. The code should be production-ready, well-commented, and easy to customize.
+
+Make it visually appealing with a modern design that converts visitors into clicks. Focus on clean code architecture that's easy to maintain and extend.
