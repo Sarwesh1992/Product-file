@@ -1,0 +1,144 @@
+Create a responsive affiliate landing page for "Hfnlife – Shop n Smile", a wellness-driven shopping platform that supports Heartfulness initiatives.
+
+🎨 Design Theme:
+
+- Peaceful, purpose-driven, clean and wellness-focused
+
+- Use natural color palette:
+
+  - Primary Green: #4B8A47 (buttons, headings)
+
+  - Background Beige: #F5F0E1
+
+  - Sky Blue Accent: #BEE3DB
+
+  - Muted Gold: #D9A441 (hover accents, offers)
+
+  - Dark Charcoal: #333333 (text)
+
+  - Light Gray: #DCDCDC (borders)
+
+  - WhatsApp Green: #25D366 (for sticky chat button)
+
+- Use rounded typography like Inter or Nunito
+
+- All sections should be mobile-first, scroll-friendly, and responsive with clean spacing
+
+---
+
+🧘 Hero Section (Top of Page):
+
+- Full-width background: linear gradient from #F5F0E1 to #BEE3DB at 135°
+
+- Centered content:
+
+  - Large headline: “Can shopping ever be worthwhile? And even give you a reason to smile?”
+
+  - Subheadline: “YES, when you shop via hfnl!fe!”
+
+  - Supporting text below: “By routing your purchases through our Smile Partners — Amazon, Ajio, Myntra, Goibibo, etc. — you support Heartfulness initiatives at no extra cost.”
+
+  - Large CTA button: “Start Shopping” in green (#4B8A47) with rounded corners, white text, and hover effect in muted gold
+
+---
+
+🛍️ Instruction Section:
+
+- Heading: “Click on a Smile Partner icon below & shop as usual. Your reason to smile is now just a click away!”
+
+- Centered layout with proper padding
+
+---
+
+🛒 Section 1 – Shopping Partners:
+
+Create a 4-column responsive grid (2 columns tablet, 1 mobile)
+
+Each partner card includes:
+
+- Rounded tile with logo placeholder
+
+- Short offer line in muted gold
+
+- Button: “Shop Now” in green with hover in gold
+
+Partners:
+
+- Amazon – “Mega Deals on Daily Essentials”
+
+- Myntra – “Flat 50% Off on Fashion”
+
+- Ajio – “Up to 70% Off + Cashback”
+
+- Tata Neu – “NeuCoins on Every Order”
+
+---
+
+✈️ Section 2 – Travel Partners:
+
+Same layout as above.
+
+Partners:
+
+- Goibibo – “Flat ₹1000 Off on Flights”
+
+- RedBus – “Flat ₹200 Off on Bus Rides”
+
+- Abhibus – “Flat ₹150 Cashback”
+
+- Indigo – “Flight Deals via App”
+
+---
+
+💳 Section 3 – Wallet & Bank Offers:
+
+Same layout.
+
+Partners:
+
+- HDFC – “5% Cashback with Credit Card”
+
+- Paytm – “Exclusive Recharge Offers”
+
+- Tata Neu – “Use NeuCoins for Extra Savings”
+
+---
+
+📞 Sticky WhatsApp Button:
+
+- Fixed bottom-right
+
+- WhatsApp green color (#25D366)
+
+- WhatsApp icon + label: “Need help? Chat with us”
+
+- Link to: wa.me/91XXXXXXXXXX
+
+---
+
+🦶 Footer Section:
+
+- Background color: #F5F0E1
+
+- Centered text:
+
+  - “Hfnlife — Shop with Purpose, Smile with Heart.”
+
+  - Subtext: “Powered by Heartfulness.”
+
+- Text color: #4B8A47 or #333333
+
+---
+
+🧼 Design Notes:
+
+- Smooth fade-in animations on scroll
+
+- Rounded corners on all cards and buttons
+
+- Use WebP images for logos
+
+- Use shadow and hover lifts for interactive tiles
+
+- Ensure high performance and mobile loading
+
