@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop n Smile - India's Trusted Brands in One Place</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary-green: #4B8A47;
+            --bg-beige: #F5F0E1;
+            --sky-blue: #BEE3DB;
+            --muted-gold: #D9A441;
+            --dark-charcoal: #333333;
+            --light-gray: #DCDCDC;
+            --whatsapp-green: #25D366;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-beige);
+            color: var(--dark-charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--bg-beige) 0%, var(--sky-blue) 100%);
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--dark-charcoal);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--dark-charcoal);
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary-green);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(75, 138, 71, 0.3);
+        }
+
+        .cta-button:hover {
+            background: var(--muted-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(217, 164, 65, 0.4);
+        }
+
+        /* Instructions Section */
+        .instructions {
+            text-align: center;
+            padding: 3rem 2rem 2rem;
+            background: var(--white);
+        }
+
+        .instructions h3 {
+            font-size: 1.8rem;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        /* Partner Sections */
+        .section {
+            padding: 3rem 2rem;
+            background: var(--white);
+        }
+
+        .section:nth-child(even) {
+            background: var(--bg-beige);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-green);
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .partner-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .partner-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(75, 138, 71, 0.2);
+            border-color: var(--primary-green);
+        }
+
+        .partner-logo {
+            width: 80px;
+            height: 80px;
+            background: var(--sky-blue);
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--primary-green);
+            font-weight: bold;
+        }
+
+        .partner-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark-charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        .partner-offer {
+            font-size: 0.9rem;
+            color: var(--muted-gold);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .shop-button {
+            background: var(--primary-green);
+            color: var(--white);
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .shop-button:hover {
+            background: var(--muted-gold);
+            transform: scale(1.05);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--whatsapp-green);
+            color: var(--white);
+            padding: 1rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-button i {
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-beige);
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .footer h4 {
+            color: var(--primary-green);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer p {
+            color: var(--dark-charcoal);
+            opacity: 0.8;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .partners-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .section {
+                padding: 2rem 1rem;
+            }
+
+            .whatsapp-button span {
+                display: none;
+            }
+
+            .whatsapp-button {
+                padding: 1rem;
+                border-radius: 50%;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .partners-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .partners-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Can shopping ever be worthwhile?<br>And even give you a reason to smile?</h1>
+            <h2>YES, when you shop via hfnl!fe!</h2>
+            <p>By routing your purchases through our Smile Partners — Amazon, Ajio, Myntra, Goibibo, etc. — you support Heartfulness initiatives at no extra cost.</p>
+            <a href="#partners" class="cta-button">Start Shopping</a>
+        </div>
+    </section>
+
+    <!-- Instructions -->
+    <section class="instructions">
+        <h3>Click on a Smile Partner icon below & shop as usual.<br>Your reason to smile is now just a click away!</h3>
+    </section>
+
+    <!-- Shopping Partners -->
+    <section class="section" id="partners">
+        <h2 class="section-title">🛍️ Shopping Partners</h2>
+        <div class="partners-grid">
+            <div class="partner-card" onclick="redirectToPartner('https://amazon.in')">
+                <div class="partner-logo">A</div>
+                <div class="partner-name">Amazon</div>
+                <div class="partner-offer">Mega Deals on Daily Essentials</div>
+                <button class="shop-button">Shop Now</button>
+            </div>
+            
+            <div class="partner-card" onclick="redirectToPartner('https://myntra.com')">
+                <div class="partner-logo">M</div>
+                <div class="partner-name">Myntra</div>
+                <div class="partner-offer">Flat 50% Off on Fashion</div>
+                <button class="shop-button">Shop Now</button>
+            </div>
+            
+            <div class="partner-card" onclick="redirectToPartner('https://ajio.com')">
+                <div class="partner-logo">A</div>
+                <div class="partner-name">Ajio</div>
+                <div class="partner-offer">Up to 70% Off + Cashback</div>
+                <button class="shop-button">Shop Now</button>
+            </div>
+            
+            <div class="partner-card" onclick="redirectToPartner('https://tata.com')">
+                <div class="partner-logo">T</div>
+                <div class="partner-name">Tata Neu</div>
+                <div class="partner-offer">NeuCoins on Every Order</div>
+                <button class="shop-button">Shop Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Partners -->
+    <section class="section">
+        <h2 class="section-title">✈️ Travel Partners</h2>
+        <div class="partners-grid">
+            <div class="partner-card" onclick="redirectToPartner('https://goibibo.com')">
+                <div class="partner-logo">G</div>
+                <div class="partner-name">Goibibo</div>
+                <div class="partner-offer">Flat ₹1000 Off on Flights</div>
+                <button class="shop-button">Shop Now</button>
+            </div>
+            
+            <div class="partner-card" onclick="redirectToPartner('https://redbus.in')">
+                <div class="partner-logo">R</div>
+                <div class="partner-name">RedBus</div>
+                <div class="partner-offer">Flat ₹200 Off on Bus Rides</div>
+                <button class="shop-button">Shop Now</button>
+            </div>
+            
+            <div class="partner-card" onclick="redirectToPartner('https://abhibus.com')">
+                <div class="partner-logo">A</div>
+                <div class="partner-name">Abhibus</div>
+                <div class="partner-offer">Flat ₹150 Cashback</div>
+                <button class="shop-button">Shop Now</button>
+            </div>
+            
+            <div class="partner-card" onclick="redirectToPartner('https://goindigo.in')">
+                <div class="partner-logo">I</div>
+                <div class="partner-name">IndiGo</div>
+                <div class="partner-offer">Flight Deals via App</div>
+                <button class="shop-button">Shop Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wallet & Bank Partners -->
+    <section class="section">
+        <h2 class="section-title">💳 Wallet & Bank Offers</h2>
+        <div class="partners-grid">
+            <div class="partner-card" onclick="redirectToPartner('https://hdfcbank.com')">
+                <div class="partner-logo">H</div>
+                <div class="partner-name">HDFC Bank</div>
+                <div class="partner-offer">5% Cashback with Credit Card</div>
+                <button class="shop-button">Shop Now</button>
+            </div>
+            
+            <div class="partner-card" onclick="redirectToPartner('https://paytm.com')">
+                <div class="partner-logo">P</div>
+                <div class="partner-name">Paytm</div>
+                <div class="partner-offer">Exclusive Recharge Offers</div>
+                <button class="shop-button">Shop Now</button>
+            </div>
+            
+            <div class="partner-card" onclick="redirectToPartner('https://flipkart.com')">
+                <div class="partner-logo">F</div>
+                <div class="partner-name">Flipkart</div>
+                <div class="partner-offer">Big Billion Days Sale</div>
+                <button class="shop-button">Shop Now</button>
+            </div>
+            
+            <div class="partner-card" onclick="redirectToPartner('https://makemytrip.com')">
+                <div class="partner-logo">M</div>
+                <div class="partner-name">MakeMyTrip</div>
+                <div class="partner-offer">Travel Deals & Discounts</div>
+                <button class="shop-button">Shop Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/911234567890" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>Need help? Chat with us</span>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h4>Hfnlife — Shop with Purpose, Smile with Heart.</h4>
+        <p>Powered by Heartfulness.</p>
+    </footer>
+
+    <script>
+        // Redirect function for partner clicks
+        function redirectToPartner(url) {
+            window.open(url, '_blank');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelector('.cta-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#partners').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all partner cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.partner-card');
+            cards.forEach((card, index) => {
+                // Stagger the animations
+                setTimeout(() => {
+                    observer.observe(card);
+                }, index * 100);
+            });
+        });
+
+        // Add hover sound effect (optional)
+        document.querySelectorAll('.partner-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            });
+        });
+    </script>
+</body>
+</html>
